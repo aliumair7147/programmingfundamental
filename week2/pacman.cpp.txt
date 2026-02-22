@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Each cout line represents one line of the ASCII art
+    cout << "      . . : : -- - : : . .      " << endl;
+    cout << "   . . . . . . . . . . . . . .  " << endl;
+    cout << " . . . . . . . . . . . . . . .  " << endl;
+    cout << ". . . . . . . . . . . . . . . . " << endl;
+    cout << ". . . . . . . . . . . . . . - - . " << endl;
+    cout << ". . . . . . . . . . . . - - : . " << endl;
+    cout << ": - - - - - - - - - - : : .     " << endl;
+    cout << ". . . . . . . . . . - - : .     " << endl;
+    cout << ". . . . . . . . . . . . . - - : . " << endl;
+    cout << ": - - - - - - - - - - - - - - : ." << endl;
+    cout << " . . . . . . . . . . . . . . . : " << endl;
+    cout << "      . : - - - - - - - : .     " << endl;
+
+    return 0;
+}

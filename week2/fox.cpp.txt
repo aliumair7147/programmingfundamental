@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "     ......          00000   00000          ......     " << endl;
+    cout << "    ........          000     000          ........    " << endl;
+    cout << "   ..........          20            ..........   " << endl;
+    cout << "  .... 00 ....       0000000 00000 th       ....   " << endl;
+    cout << "    ...  ...         CENTURY          ...    " << endl;
+    cout << "      .. ..       00000 00000 0 00000       .. ..      " << endl;
+    cout << "     _|_|_|_      |  TEXT  |      _|_|_|_     " << endl;
+    cout << "____|_______|____ |  00000  0  0 | ____|_______|____" << endl;
+
+    return 0;
+}
