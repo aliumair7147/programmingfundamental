@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float sqMeters, width, height, wallArea;
+    int walls;
+    cout << "Number of square meters you can paint: ";
+    cin >> sqMeters;
+    cout << "Width of the single wall (in meters): ";
+    cin >> width;
+    cout << "Height of the single wall (in meters): ";
+    cin >> height;
+    wallArea = width * height;
+    walls = (int)(sqMeters / wallArea);
+    cout << "Number of walls you can paint: " << walls << endl;
+    return 0;
+}

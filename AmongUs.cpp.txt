@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int imposters, players;
+    cout << "Enter Imposter Count: ";
+    cin >> imposters;
+    cout << "Enter Player Count: ";
+    cin >> players;
+    cout << "Chance of being an imposter: " << (imposters * 100) / players << "%" << endl;
+    return 0;
+}

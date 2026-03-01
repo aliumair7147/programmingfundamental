@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char movie;
+    float adultPrice, childPrice, donationPercent;
+    int adultCount, childCount;
+    float total, donation, remaining;
+    cout << "Enter the movie name: ";
+    cin >> movie;
+    cout << "Enter the adult ticket price: ";
+    cin >> adultPrice;
+    cout << "Enter the child ticket price: ";
+    cin >> childPrice;
+    cout << "Enter the number of adult tickets sold: ";
+    cin >> adultCount;
+    cout << "Enter the number of child tickets sold: ";
+    cin >> childCount;
+    cout << "Enter the percentage of the amount to be donated to charity: ";
+    cin >> donationPercent;
+    total = adultPrice * adultCount + childPrice * childCount;
+    donation = total * donationPercent / 100;
+    remaining = total - donation;
+    cout << "Movie: " << movie << endl;
+    cout << "Total amount generated from ticket sales: " << total << endl;
+    cout << "Donation to charity (" << donationPercent << "%): " << donation << endl;
+    cout << "Remaining amount after donation: " << remaining << endl;
+    return 0;
+}

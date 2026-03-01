@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num, sum;
+    sum = 0;
+    cout << "Enter integer 1: ";
+    cin >> num;
+    sum = sum + num;
+    cout << "Enter integer 2: ";
+    cin >> num;
+    sum = sum + num;
+    cout << "Enter integer 3: ";
+    cin >> num;
+    sum = sum + num;
+    cout << "Enter integer 4: ";
+    cin >> num;
+    sum = sum + num;
+    cout << "Enter integer 5: ";
+    cin >> num;
+    sum = sum + num;
+    cout << "Sum: " << sum << endl;
+    return 0;
+}

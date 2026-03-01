@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float vegPrice, fruitPrice, vegKg, fruitKg;
+    cout << "Enter vegetable price per kilogram (in coins): ";
+    cin >> vegPrice;
+    cout << "Enter fruit price per kilogram (in coins): ";
+    cin >> fruitPrice;
+    cout << "Enter total kilograms of vegetables: ";
+    cin >> vegKg;
+    cout << "Enter total kilograms of fruits: ";
+    cin >> fruitKg;
+    cout << "Total earnings in Rupees (Rps): " << vegPrice * vegKg + fruitPrice * fruitKg << endl;
+    return 0;
+}
