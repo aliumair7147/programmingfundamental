@@ -2,7 +2,14 @@
 using namespace std;
 
 int main() {
-    for (int i = 5; i >= 1; i--) cout<< endl;
-        for (int j = 5; j >= i; j--) cout << j << " ";
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter " << n << " numbers:" << endl;
+    for (int i = 0; i < n; i++) cin >> arr[i];
+    int sum = 0;
+    for (int i = 0; i < n; i++) sum += arr[i];
+    cout << "Sum of all elements: " << sum << endl;
     return 0;
 }

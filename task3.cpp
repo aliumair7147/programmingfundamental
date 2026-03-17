@@ -2,18 +2,18 @@
 using namespace std;
 
 int main() {
-    int length;
-    cout << "Enter the length of the Fibonacci series: ";
-    cin >> length;
-
-    int a = 0, b = 1;
-    for (int i = 0; i < length; i++) {
-        cout << a;
-        if (i < length - 1) cout << ", ";
-        int temp = a + b;
-        a = b;
-        b = temp;
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter " << n << " numbers:" << endl;
+    for (int i = 0; i < n; i++) cin >> arr[i];
+    int large = arr[0], small = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > large) large = arr[i];
+        if (arr[i] < small) small = arr[i];
     }
-    cout << endl;
+    cout << "Largest Number: " << large << endl;
+    cout << "Smallest Number: " << small << endl;
     return 0;
 }

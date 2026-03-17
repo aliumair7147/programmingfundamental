@@ -1,15 +1,12 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    int number, digit, count = 0;
-    cout << "Enter a number: ";
-    cin >> number;
-    cout << "Enter the digit to check: ";
-    cin >> digit;
-    if (number < 0) number = -number;
-    for (; number > 0; number /= 10)
-        if (number % 10 == digit) count++;
-    cout << "Frequency: " << count << endl;
+    string names[5];
+    cout << "Enter names of 5 students:" << endl;
+    for (int i = 0; i < 5; i++) cin >> names[i];
+    cout << "Student Names are:" << endl;
+    for (int i = 0; i < 5; i++) cout << names[i] << endl;
     return 0;
 }

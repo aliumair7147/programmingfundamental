@@ -1,22 +1,30 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    double money;
-    int year;
-    cout << "Enter inherited money: ";
-    cin >> money;
-    cout << "Enter the year: ";
-    cin >> year;
-
-    double total = 0;
-    for (int y = 1800; y <= year; y++)
-        total += (y % 2 == 0) ? 12000 : 12000 + 50 * (18 + y - 1800);
-
-    double diff = money - total;
-    if (diff >= 0)
-        cout << "Yes! He will live a carefree life and will have " << diff << " dollars left." << endl;
-    else
-        cout << "He will need " << -diff << " dollars to survive." << endl;
+    int n;
+    cout << "Enter number of flights: ";
+    cin >> n;
+    int flightNumber[n];
+    string destination[n];
+    int seatsAvailable[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Enter flight number for flight " << i + 1 << ": ";
+        cin >> flightNumber[i];
+        cout << "Enter destination for flight " << flightNumber[i] << ": ";
+        cin >> destination[i];
+        cout << "Enter seats available for flight " << flightNumber[i] << ": ";
+        cin >> seatsAvailable[i];
+    }
+    cout << "\nFlight Information:\n------------------" << endl;
+    for (int i = 0; i < n; i++)
+        cout << "Flight " << flightNumber[i] << " to " << destination[i]
+             << " has " << seatsAvailable[i] << " seats available." << endl;
+    cout << "\nFlights with less than 5 seats available:\n-----------------------------------------" << endl;
+    for (int i = 0; i < n; i++)
+        if (seatsAvailable[i] < 5)
+            cout << "Flight " << flightNumber[i] << " to " << destination[i]
+                 << " has only " << seatsAvailable[i] << " seats left!" << endl;
     return 0;
 }

@@ -1,22 +1,25 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    int N, X, P;
-    cout << "Enter Lilly's age: ";
-    cin >> N;
-    cout << "Enter price of washing machine: ";
-    cin >> X;
-    cout << "Enter unit price of each toy: ";
-    cin >> P;
-
-    double saved = 0, gift = 10.0;
-    for (int i = 1; i <= N; i++) {
-        if (i % 2 == 0) { saved += gift - 1.0; gift += 10.0; }
-        else { saved += P - 1.0; }
+    int n;
+    cout << "Enter number of products: ";
+    cin >> n;
+    string productNames[n];
+    double prices[n];
+    int quantity[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Enter name of product " << i + 1 << ": ";
+        cin >> productNames[i];
+        cout << "Enter price of " << productNames[i] << ": $";
+        cin >> prices[i];
+        cout << "Enter quantity of " << productNames[i] << ": ";
+        cin >> quantity[i];
     }
-
-    double diff = saved - X;
-    cout << (diff >= 0 ? "Yes! " : "No! ") << (diff >= 0 ? diff : -diff) << endl;
+    for (int i = 0; i < n; i++)
+        cout << productNames[i] << ": $" << prices[i]
+             << ", " << quantity[i] << " in stock, Total value: $"
+             << prices[i] * quantity[i] << endl;
     return 0;
 }
